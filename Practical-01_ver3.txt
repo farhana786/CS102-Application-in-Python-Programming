@@ -1,0 +1,101 @@
+#Name : Veeraj Goudar
+#Roll no : 624
+#Problem Statement 1 :#To accept an object mass in kilograms and velocity in meters per second and display its momentum.
+                      #Momentum is calculated as e=mc2 where m is the mass of the object and c is its velocity
+
+velocity = int(input('Enter the velocity in metre per second : '))   #input of velocity as integer and mass
+mass = int(input('Enter the mass of object : '))
+energy = (mass)*(velocity)**2                                        #energy=mc^2
+momentum = (mass)*(velocity)                                         #momentum=mv
+print('\n',f'Momentum is {momentum}','kgm/s^2')                      #printing the values of integer and string
+print(f'Energy is {energy}','J','\n')                                #Using formatted strings
+
+
+#Problem Statement 2:
+#Find the area volume of any given shape like cube ,sphere or cuboid
+
+length_cube=int(input('Enter the length of side of the cube : '))    #Taking input as integer
+area_cube=6*length_cube**2                                           #Area of cube is 6*side^2
+print('\n',f'Area of the cube is {area_cube} m^2')              
+volume_cube=length_cube**3                                           #Volume of cube is side^3
+print(f'Volume of the cube is {volume_cube} m^3','\n')
+
+length_cuboid=int(input('Enter the length of the cuboid : '))         #Taking input as integer for length of cuboid
+breadth_cuboid=int(input('Enter the breadth of the cuboid : '))       #Taking input as integer for breadth of cuboid
+height__cuboid=int(input('Enter the height of the cuboid : '))        #Taking input as integer for height of cuboid
+area_cuboid=2*(length_cuboid*breadth_cuboid+length_cuboid*height__cuboid+height__cuboid*breadth_cuboid)      #Area of cuboid is 2(lb+bh+lh)
+print('\n',f'Area of the cuboid is {area_cuboid} m^2')
+volume_cuboid= length_cuboid*height__cuboid*breadth_cuboid           #Volume of cuboid is lbh
+print(f'Volume of the cuboid is {volume_cuboid} m^3','\n')
+
+
+radius_sph=int(input('Enter the radius of the sphere : '))
+area_sphere=4*3.14*radius_sph**2                                     #Area of sphere is 4*pi*r^2
+print('\n',f'Area of the sphere is {area_sphere} m^2')
+volume_sphere=1.34*3.14*radius_sph**3                                #Volume of sphere is 4*pi*r^3/3
+print(f'Volume of the sphere is {volume_sphere:.2f} m^3','\n')
+
+#Problem Statement 3:
+#To calculate profit/loss by taking Selling Price and Cost Price by user. Also, calculate the percentage of P/L.
+product=input('Enter the product selling : ')                        #input of the product type
+cost_price=float(input(f'Enter the cost price of the {product} : '))            #Input for CP
+selling_price=float(input(f'Enter the selling price of the {product} : '))      #Input for SP
+profit = selling_price - cost_price                                  #Profit 
+loss = cost_price - selling_price                                    #Loss
+profit_perc = (profit*100)/cost_price                                #Percentage of profit and loss
+loss_perc = (loss*100)/cost_price
+print('\n',f'The profit on the {product} with cost price of Rs.{cost_price:.2f} and selling price of Rs.{selling_price:.2f} is Rs.{profit:.2f}')
+print(f'The percentage of the profit is {profit_perc:.2f}%')            #.2f for floating number upto 2 decimal point
+print(f'The loss on the {product} with cost price of Rs.{cost_price:.2f} and selling price of Rs.{selling_price:.2f} is Rs.{loss:.2f}')
+print(f'The percentage of the loss is {loss_perc:.2f}%','\n')
+
+
+#Problem Statement 4:
+#To calculate the mileage of a bike or car in KMPL. Input: Distance traveled in Meters and Amount of fuel used in Millilitres
+vehicle=input('Enter the vehicle you use : ')                       #Input for vehicle type like bike or car 
+distance = float(input('Enter the distance travelled by the vehicle in meters : '))         #Distance took in meters
+fuel = float(input(f'Enter the amount of fuel consumed to travel {distance:.2f}m in mililiters : '))    #Fuel used in mililiters
+new_distance= distance/1000                                         #Conversion of distance and fuel to reequired parameters
+new_fuel= fuel/1000
+kmpl= new_distance/new_fuel                                         #Formula for KMPL mileage
+print('\n',f'The mileage of the {vehicle} is {kmpl:.2f}km/L after travelling {distance:.2f}m and {fuel:.2f}ml')
+
+
+#OUTPUT
+# Enter the velocity in metre per second : 5
+# Enter the mass of object : 4
+
+#  Momentum is 20 kgm/s^2
+# Energy is 100 J 
+
+# Enter the length of side of the cube : 5
+
+#  Area of the cube is 150 m^2
+# Volume of the cube is 125 m^3
+
+# Enter the length of the cuboid : 4
+# Enter the breadth of the cuboid : 6
+# Enter the height of the cuboid : 5
+
+#  Area of the cuboid is 148 m^2
+# Volume of the cuboid is 120 m^3
+
+# Enter the radius of the sphere : 4
+
+#  Area of the sphere is 200.96 m^2
+# Volume of the sphere is 269.29 m^3
+
+# Enter the product selling : Bottle
+# Enter the cost price of the Bottle : 98.04
+# Enter the selling price of the Bottle : 108.08
+
+#  The profit on the Bottle with cost price of Rs.98.04 and selling price of Rs.108.08 is Rs.10.04
+# The percentage of the profit is 10.24%
+# The loss on the Bottle with cost price of Rs.98.04 and selling price of Rs.108.08 is Rs.-10.04
+# The percentage of the loss is -10.24%
+
+# Enter the vehicle you use : Car
+# Enter the distance travelled by the vehicle in meters : 25000
+# Enter the amount of fuel consumed to travel 25000.00m in mililiters : 1000
+
+#  The mileage of the Car is 25.00km/L after travelling 25000.00m and 1000.00ml
